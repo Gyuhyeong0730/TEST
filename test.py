@@ -8,9 +8,11 @@ st.set_page_config(
 )
 
 col1, col2 = st.columns(2)
+col1.header("Code Editor")
+col2.header("Code View")
 
 with col1.container(border=False):
-    st.header("Code Editor")
+    
 
     custom_btns = [
         {
@@ -66,6 +68,6 @@ if (
     code: str = st.session_state["code_input"]["text"]
     code = code.replace("import streamlit as st\n\n", "")
 
-    col2.header("Code View")
+    
     with col2:
         exec(code)
