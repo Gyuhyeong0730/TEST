@@ -67,5 +67,5 @@ if (
     code = code.replace("import streamlit as st\n\n", "")
 
     col2.header("Code View")
-    with col2.expander("a"):
+    with col2:
         exec(code)
